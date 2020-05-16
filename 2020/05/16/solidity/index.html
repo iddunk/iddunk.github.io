@@ -20,30 +20,39 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="去节点思维">
-<meta property="og:type" content="website">
-<meta property="og:title" content="iddunk">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Solidity语言学习Solidity基础特性​        任何编程语言都有其规范的代码结构，用于表达在一个代码文件中如何组织和编写代码，Solidity也一样。 本节，我们将通过一个简单的合约示例，来了解智能合约的代码结构。 1234567891011121314151617181920212223242526272829303132pragma solidity ^0.4.25;cont">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Solidity之基础特性">
+<meta property="og:url" content="http://yoursite.com/2020/05/16/solidity/index.html">
 <meta property="og:site_name" content="iddunk">
-<meta property="og:description" content="去节点思维">
+<meta property="og:description" content="Solidity语言学习Solidity基础特性​        任何编程语言都有其规范的代码结构，用于表达在一个代码文件中如何组织和编写代码，Solidity也一样。 本节，我们将通过一个简单的合约示例，来了解智能合约的代码结构。 1234567891011121314151617181920212223242526272829303132pragma solidity ^0.4.25;cont">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-1.png">
+<meta property="og:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-2.png">
+<meta property="og:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-3.png">
+<meta property="og:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-4.png">
+<meta property="og:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-5.png">
+<meta property="article:published_time" content="2020-05-16T03:33:20.000Z">
+<meta property="article:modified_time" content="2020-05-16T03:34:45.020Z">
 <meta property="article:author" content="iddunk">
+<meta property="article:tag" content="solidity,blockChain">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://iddunk.oss-cn-shenzhen.aliyuncs.com/solidityStudy-1.png">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/05/16/solidity/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>iddunk</title>
+  <title>Solidity之基础特性 | iddunk</title>
   
 
 
@@ -123,9 +132,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -141,10 +151,9 @@
       <meta itemprop="name" content="iddunk">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/16/solidity/" class="post-title-link" itemprop="url">Solidity之基础特性</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Solidity之基础特性
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -168,7 +177,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Solidity语言学习"><a href="#Solidity语言学习" class="headerlink" title="Solidity语言学习"></a>Solidity语言学习</h2><h3 id="Solidity基础特性"><a href="#Solidity基础特性" class="headerlink" title="Solidity基础特性"></a>Solidity基础特性</h3><p>​        任何编程语言都有其规范的代码结构，用于表达在一个代码文件中如何组织和编写代码，Solidity也一样。</p>
+        <h2 id="Solidity语言学习"><a href="#Solidity语言学习" class="headerlink" title="Solidity语言学习"></a>Solidity语言学习</h2><h3 id="Solidity基础特性"><a href="#Solidity基础特性" class="headerlink" title="Solidity基础特性"></a>Solidity基础特性</h3><p>​        任何编程语言都有其规范的代码结构，用于表达在一个代码文件中如何组织和编写代码，Solidity也一样。</p>
 <p>本节，我们将通过一个简单的合约示例，来了解智能合约的代码结构。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.25;</span><br><span class="line">contract Sample &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;State variables</span><br><span class="line">    address private _admin;</span><br><span class="line">    uint private _state;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Modifier</span><br><span class="line">    modifier onlyAdmin() &#123;</span><br><span class="line">        require(msg.sender &#x3D;&#x3D; _admin, &quot;You are not admin&quot;);      </span><br><span class="line">        _;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Events</span><br><span class="line">    event SetState(uint value);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Constructor</span><br><span class="line">    constructor() public &#123;</span><br><span class="line">        _admin &#x3D; msg.sender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;Functions</span><br><span class="line">    function setState(uint value) public onlyAdmin &#123;</span><br><span class="line">        _state &#x3D; value;</span><br><span class="line">        emit SetState(value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function getValue() public view returns (uint) &#123;</span><br><span class="line">        return _state;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -368,300 +377,33 @@
 </ul>
 <p>这里只列出了部分常见全局变量，完整版本请参考<a href="https://solidity.readthedocs.io/en/latest/units-and-global-variables.html" target="_blank" rel="noopener">这里</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/solidity-blockChain/" rel="tag"># solidity,blockChain</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/16/docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="iddunk">
-      <meta itemprop="description" content="去节点思维">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="iddunk">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/16/docker/" class="post-title-link" itemprop="url">docker基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-16 11:18:25 / 修改时间：11:22:36" itemprop="dateCreated datePublished" datetime="2020-05-16T11:18:25+08:00">2020-05-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><h2 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、yum 包更新到最新</span></span><br><span class="line">yum update</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、 安装需要的软件包，yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3、 设置yum源</span></span><br><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta">#</span><span class="bash"> 4、 安装docker，出现输入的界面都按y</span></span><br><span class="line">yum install -y docker-ce</span><br><span class="line"><span class="meta">#</span><span class="bash"> 5、 查看docker版本，验证是否安装成功</span></span><br><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+        
 
 
-
-<h2 id="docker架构"><a href="#docker架构" class="headerlink" title="docker架构"></a>docker架构</h2><p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/docker-frame.jpg" alt="image-20200416205059220"></p>
-<ul>
-<li>daemon: docker在机器上以守护进程(后台运行的进程)的形式存在,客户端发送docker命令操作该进程</li>
-<li>image(镜像): 镜像就是一堆只读层（read-only layer）的统一视角，不可变</li>
-<li>container:(容器): 容器 = 镜像 + 读写层，关系就像类与对象的关系；一个运行态容器（running container）被定义为一个可读写的统一文件系统加上隔离的进程空间和包含其中的进程，注意，一个容器只能有一个进程隔离空间</li>
-<li>repository: 仓库，类似maven仓库，也有公共仓库和私有仓库</li>
-</ul>
-<h2 id="docker镜像加速"><a href="#docker镜像加速" class="headerlink" title="docker镜像加速"></a>docker镜像加速</h2><ul>
-<li>打开阿里云</li>
-<li>搜索容器镜像服务</li>
-<li>找到镜像加速器，复制粘贴配置即可</li>
-</ul>
-<h2 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h2><h3 id="服务相关命令"><a href="#服务相关命令" class="headerlink" title="服务相关命令"></a>服务相关命令</h3><ul>
-<li><p>启动docker服务</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止docker服务</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启docker服务</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看docker服务状态</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置开机启动docker服务</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="镜像相关命令"><a href="#镜像相关命令" class="headerlink" title="镜像相关命令"></a>镜像相关命令</h3><ul>
-<li><p>查看镜像</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、 查看所有镜像详细信息</span></span><br><span class="line">docker images </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、 查看所有镜像id</span></span><br><span class="line">docker images -q</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>搜索镜像(查看有哪些可以下载)</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>拉取，下载镜像</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除镜像</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、删除单个镜像</span></span><br><span class="line">docker rmi &lt;imageid&gt;|&lt;repository:tag&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、 删除所有镜像</span></span><br><span class="line">docker rmi `docker images -q`</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="容器相关命令"><a href="#容器相关命令" class="headerlink" title="容器相关命令"></a>容器相关命令</h3><ul>
-<li><p>创建并运行容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker run </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####### 可配置参数</span></span></span><br><span class="line">-i 保持容器运行</span><br><span class="line">-t 分配一个终端,exit容器就会关闭</span><br><span class="line">--name 起名</span><br><span class="line">--expose 公开一个或多个端口</span><br><span class="line">-d 以(守护)后台模式运行容器，并打印容器id,进入终端需要输入 docker exec -it &lt;name&gt; /bin/bash,exit容器不会关闭</span><br><span class="line">-l 添加元数据</span><br><span class="line">-p &lt;主机port&gt;:&lt;容器port&gt; 将容器端口映射到主机端口</span><br><span class="line">-P 随机映射端口</span><br><span class="line">--rm 当容器退出时自动移除这个容器</span><br><span class="line">centos:7 &lt;镜像名&gt;:&lt;tag&gt;/&lt;imageid&gt;</span><br><span class="line">/bin/bash 初始化运行命令</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看正在运行的容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看全部容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除所有不在运行的容器</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm `docker ps -aq`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看容器信息</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p><a href="http://dockone.io/article/783" target="_blank" rel="noopener">深入理解docker命令</a></p>
-<h2 id="docker容器的数据卷"><a href="#docker容器的数据卷" class="headerlink" title="docker容器的数据卷"></a>docker容器的数据卷</h2><h3 id="数据卷概念"><a href="#数据卷概念" class="headerlink" title="数据卷概念"></a>数据卷概念</h3><p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/docker-data-%20volume.jpg" alt="image-docker-data-volume"></p>
-<p>思考：</p>
-<ul>
-<li>Docker容器删除后，容器中产生的数据是否会随之销毁?</li>
-<li>Docker容器与外部机器是否可以直接交换文件？</li>
-<li>容器之间是否可以进行数据交互？</li>
-</ul>
-<p>数据卷：</p>
-<ul>
-<li>数据卷是宿主机中的一个目录或文件</li>
-<li>当容器目录和数据卷目录绑定后，对方的修改会立即同步</li>
-<li>一个数据卷可以被多个容器同时挂载</li>
-<li>一个容器也可以被挂载多个数据卷</li>
-</ul>
-<p>注意事项：</p>
-<ul>
-<li>目录必须是绝对路径</li>
-<li>如果目录不存在，会自动创建</li>
-</ul>
-<p>作用：</p>
-<ul>
-<li>容器数据持久化</li>
-<li>外部机器和容器间接通信</li>
-<li>容器之间数据交换</li>
-</ul>
-<h3 id="配置数据卷"><a href="#配置数据卷" class="headerlink" title="配置数据卷"></a>配置数据卷</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name=test -v /root/data:/root/data centos:7</span><br></pre></td></tr></table></figure>
-
-<h3 id="数据卷容器"><a href="#数据卷容器" class="headerlink" title="数据卷容器"></a>数据卷容器</h3><p>多容器进行数据交换</p>
-<ul>
-<li>多个容器挂载同一个数据卷</li>
-<li>数据卷容器</li>
-</ul>
-<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/docker-volume-container.jpg" alt="image-docker-volume-container"></p>
-<p>配置数据卷容器</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、 创建启动c3数据卷容器，使用-v参数设置数据卷</span></span><br><span class="line">docker run -it --name=c3 -v /volume centos:7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、 创建启动c1、c2容器，使用--volumes-from参数设置数据卷</span></span><br><span class="line">docker run -it --name=c1 --volumes-from c3 centos:7</span><br><span class="line">docker run -it --name=c2 --volumes-from c3 centos:7</span><br></pre></td></tr></table></figure>
-
-<h2 id="docker应用部署"><a href="#docker应用部署" class="headerlink" title="docker应用部署"></a>docker应用部署</h2><h3 id="mysql部署"><a href="#mysql部署" class="headerlink" title="mysql部署"></a>mysql部署</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、搜索mysql镜像</span></span><br><span class="line">docker search mysql</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、拉取mysql镜像</span></span><br><span class="line">docker pull mysql:5.6</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3、创建容器，设置端口映射、目录映射</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 在/root目录下创建mysql目录用于存出mysql数据信息</span></span></span><br><span class="line">mkdir ~/mysql</span><br><span class="line">cd ~/mysql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -p:端口映射 -v:目录映射 -e:环境 </span></span></span><br><span class="line">docker run -id \</span><br><span class="line">-p 3306:3306 \</span><br><span class="line">--name=c_mysql \</span><br><span class="line">-v $PWD/conf:/etc/mysql/conf.d \</span><br><span class="line">-v $PWD/logs:/logs \</span><br><span class="line">-v $PWD/data:/var/lib/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">mysql:5.6</span><br></pre></td></tr></table></figure>
-
-<h2 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h2><h3 id="镜像原理"><a href="#镜像原理" class="headerlink" title="镜像原理"></a>镜像原理</h3><p>思考：</p>
-<ul>
-<li>docker镜像的本质是什么？</li>
-<li>docker中一个centos镜像为什么只有200M，而一个centos操作系统的iso文件要几个G？</li>
-<li>docker中一个tomcat镜像为什么有500M，而tomcat的安装包才70多M？</li>
-</ul>
-<ul>
-<li><p>docker镜像是由特殊的文件系统叠加而成</p>
-<p>  ​    最底端是bootfs，并使用宿主机的bootfs</p>
-<p>  ​    第二层是root文件系统rootfs，称为base image</p>
-<p>  ​    然后再往上可以叠加其他的镜像文件</p>
-</li>
-<li><p>统一文件系统(Union File System)技术能够将不同层整合成一个文件系统，为这些层提供了一个统一的视角，这样就隐藏了多层的存在，在用户的角度看来，只存在一个文件系统</p>
-</li>
-<li><p>一个镜像可以放在另一个镜像的上面，位于下面的镜像称为父镜像，最底部的镜像称为基础镜像</p>
-</li>
-<li><p>当从一个镜像启动容器时，docker会在最顶层加载一个读写文件系统作为容器</p>
-</li>
-</ul>
-<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/docker-image.png" alt="image-docker-image"></p>
-<h3 id="镜像制作"><a href="#镜像制作" class="headerlink" title="镜像制作"></a>镜像制作</h3><h4 id="容器转为镜像"><a href="#容器转为镜像" class="headerlink" title="容器转为镜像"></a>容器转为镜像</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker commit 容器id 镜像名称:版本号</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 镜像不能直接传输，需要先压缩</span></span></span><br><span class="line">docker save -o 压缩文件名称 镜像名称:版本号</span><br><span class="line">docker load -i 压缩文件名称</span><br></pre></td></tr></table></figure>
-
-<h4 id="dockerfile概念"><a href="#dockerfile概念" class="headerlink" title="dockerfile概念"></a>dockerfile概念</h4><ul>
-<li>dockerfile是一个文本文件</li>
-<li>每一条指令构建一层，基于基础镜像，最终构建成一个新的镜像</li>
-</ul>
-<h4 id="dockerfile制作"><a href="#dockerfile制作" class="headerlink" title="dockerfile制作"></a>dockerfile制作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、定义父镜像: FROM centos:7</span><br><span class="line">2、定义作者信息: MAINTAINER iddunk&lt;iddunk@example.com&gt;</span><br><span class="line">3、执行安装vim命令: RUN yum install -y vim</span><br><span class="line">4、定义默认的工作目录: WORKDIR /usr</span><br><span class="line">5、定义容器启动执行的命令: CMD /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h4 id="springboot项目部署"><a href="#springboot项目部署" class="headerlink" title="springboot项目部署"></a>springboot项目部署</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、制作父镜像: FROM java:8</span><br><span class="line">2、定义作者信息: MAINTAINER: iddunk&lt;iddunk@example.com&gt;</span><br><span class="line">3、将jar包添加到容器: ADD springboot.jar app.jar </span><br><span class="line">4、定义容器启动执行的命令: CMD java -jar app.jar</span><br><span class="line">5、通过dockerfile构建: docker build -f dockerfile文件路径 -t 镜像名称:版本</span><br></pre></td></tr></table></figure>
-
-<h2 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker compose"></a>docker compose</h2><h3 id="docker-compose概念"><a href="#docker-compose概念" class="headerlink" title="docker compose概念"></a>docker compose概念</h3><p>docker compose是一个编排多容器分布式部署的工具，提供命令集管理容器化应用的完整开发周期，包括服务构建，启动和停止。使用步骤:</p>
-<ul>
-<li>利用dockerfile定义运行环境镜像</li>
-<li>使用docker-compose.yml定义组成应用的各服务</li>
-<li>运行docker-compose up启动应用</li>
-</ul>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/16/docker/" rel="prev" title="docker基础">
+      <i class="fa fa-chevron-left"></i> docker基础
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="iddunk">
-      <meta itemprop="description" content="去节点思维">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="iddunk">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-16 10:59:26" itemprop="dateCreated datePublished" datetime="2020-05-16T10:59:26+08:00">2020-05-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -714,6 +456,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solidity语言学习"><span class="nav-number">1.</span> <span class="nav-text">Solidity语言学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solidity基础特性"><span class="nav-number">1.1.</span> <span class="nav-text">Solidity基础特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#状态变量"><span class="nav-number">1.1.1.</span> <span class="nav-text">状态变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件"><span class="nav-number">1.1.4.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修饰符"><span class="nav-number">1.1.5.</span> <span class="nav-text">修饰符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solidity语言运行"><span class="nav-number">1.2.</span> <span class="nav-text">Solidity语言运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#运行方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">运行方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译"><span class="nav-number">1.2.2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署"><span class="nav-number">1.2.3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setState"><span class="nav-number">1.2.4.</span> <span class="nav-text">setState</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getState"><span class="nav-number">1.2.5.</span> <span class="nav-text">getState</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solidity数据类型"><span class="nav-number">1.3.</span> <span class="nav-text">Solidity数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#整数系列"><span class="nav-number">1.3.1.</span> <span class="nav-text">整数系列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定长bytes系列"><span class="nav-number">1.3.2.</span> <span class="nav-text">定长bytes系列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变长bytes"><span class="nav-number">1.3.3.</span> <span class="nav-text">变长bytes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string"><span class="nav-number">1.3.4.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#address"><span class="nav-number">1.3.5.</span> <span class="nav-text">address</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mapping"><span class="nav-number">1.3.6.</span> <span class="nav-text">mapping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">1.3.7.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#struct"><span class="nav-number">1.3.8.</span> <span class="nav-text">struct</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局变量"><span class="nav-number">1.4.</span> <span class="nav-text">全局变量</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
