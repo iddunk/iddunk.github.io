@@ -129,6 +129,123 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/19/spring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="iddunk">
+      <meta itemprop="description" content="去节点思维">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="iddunk">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/19/spring/" class="post-title-link" itemprop="url">spring源码学习(一)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-19 14:12:58 / 修改时间：14:20:51" itemprop="dateCreated datePublished" datetime="2020-05-19T14:12:58+08:00">2020-05-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Spring源码学习之IoC-走马观花"><a href="#Spring源码学习之IoC-走马观花" class="headerlink" title="Spring源码学习之IoC(走马观花)"></a>Spring源码学习之IoC(走马观花)</h2><h3 id="什么是IoC"><a href="#什么是IoC" class="headerlink" title="什么是IoC"></a>什么是IoC</h3><ul>
+<li>调用方不去new被调用方，而是由第三方去new</li>
+</ul>
+<h3 id="IoC和DI的区别"><a href="#IoC和DI的区别" class="headerlink" title="IoC和DI的区别"></a>IoC和DI的区别</h3><p>  首先，给出结论:<font color=yellow><strong>IOC是目的，DI是手段</strong></font></p>
+<p>  如何理解这个结论呢？</p>
+<ul>
+<li>引用Martin Fowler原话</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a result I think we need a more specific name for this pattern. Inversion of Control is too generic a term, and thus people find it confusing. As a result with a lot of discussionwith various IoC advocates we settled on the name Dependency Injection.</span><br></pre></td></tr></table></figure>
+
+<p>大意是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">已经存在某种模式，该模式被称为IoC，但IoC太普遍，会让人产生疑惑，为了让表意更明确，决定用DI来精确指称那个模式。</span><br></pre></td></tr></table></figure>
+
+<p>IoC要做的事情就是让控制反转，对象实例不再由程序员来new，这是它的目的，而IoC主要的实现方式有两种：依赖查找，依赖注入。</p>
+<p>DI即Dependency Injection就是依赖注入，它只是IoC这个目的的一种实现手段，只是因为依赖注入相对于依赖查找是一种更可取的手段，使得它成了更流行的那一种，所以才导致人们总是把IoC和DI混为一谈。</p>
+<h3 id="Bean是如何被初始化的"><a href="#Bean是如何被初始化的" class="headerlink" title="Bean是如何被初始化的"></a>Bean是如何被初始化的</h3><ul>
+<li>首先编写一个简易demo，方便我们快速的找到IoC所做的事情</li>
+</ul>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-1.jpg" alt="spring-ioc-1"></p>
+<ul>
+<li><p>从图中我们可以知道，ClassPathXmlApplicationContext是实例化Bean的关键，它把Bean加载到context，并通过getBean方法拿到Bean实例。那我们接着看看ClassPathXmlApplicationContext到底做了什么</p>
+<p>  <img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-2.jpg" alt="spring-ioc-2"></p>
+</li>
+<li><p>首先来看一下它的类图，大概了解一下其大致框架</p>
+</li>
+<li><p>从<code>ClassPathXmlApplicationContext</code>的构造函数看，最核心的就是<code>refresh()</code>函数，其他只是设一些值。<br>  而这个<code>refresh()</code>是调用父类<code>AbstractApplicationContext</code>中的<code>refresh()</code>。<br>  根据它的注解可知它是加载刷新了整个context，并且加载所有Bean定义和创建对应的单例。</p>
+</li>
+</ul>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-refresh-1.jpg" alt="spring-ioc-refresh-1"></p>
+<p>那我们来看一下这个refresh函数做了什么</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-refresh-2.jpg" alt="spring-ioc-refresh-2"></p>
+<p>里面有许多对于beanFactory的操作方法，重点看下<code>obtainFreshBeanFactory()</code>（重新获取一个BeanFactory）。</p>
+<p>它里面有个核心的方法<code>refreshBeanFactory()</code></p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-refreshBeanFactory.jpg" alt="spring-ioc-refreshBeanFactory"></p>
+<p>如果已有BeanFactory，先删除所有Bean，然后关闭BeanFactory。<br>然后创建一个新的<code>ListableBeanFactory</code>，这个工厂里会预先加载所有的Bean。<br>最后核心的就是<code>loadBeanDefinitions(beanFactory)</code>。</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-loadBeanDefinitions.jpg" alt="spring-ioc-load-1"></p>
+<p>它是加载Bean的定义，实现交给了下面这个方法</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-loadBeanDefinitions-1.jpg" alt="spring-ioc-load-1"></p>
+<p>用的是XmlBeanDefinitionReader直接读配置文件加载Bean Definition(Bean定义)到BeanFactory。它里面一步步把xml的配置文件拆解读取，把一个个Bean Definition加载到BeanFactory里。</p>
+<p>至此，已经有用一个加载好Bean Definition的BeanFactory了。<br>其他方法也是围绕BeanFactory后置处理和Context的配置准备。</p>
+<h3 id="Bean又是如何被获取的"><a href="#Bean又是如何被获取的" class="headerlink" title="Bean又是如何被获取的"></a>Bean又是如何被获取的</h3><p>找到一开始的context.getBean()，查看源码找到对应的DefaultListableBeanFactory中的实现</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-getBean.jpg" alt="spring-ioc-getBean-1"></p>
+<p>可以看出 拿到Bean的关键在于resolveBean方法，再次深入查看其源码</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-resolveBean.jpg" alt="spring-ioc-resolveBean"></p>
+<p>如果namedBean不为空，直接从其中获取到实例返回，如果为空则获取父类的，那么我们再进到resolveNamedBean中看看</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-getBeanNameForType.jpg" alt="spring-ioc-resolveNamedBean"></p>
+<p>这里通过getBeanNamesForType获取到当前Type下所有BeanName，看看spring是如何做的</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-getBeanNameForType-1.jpg" alt="spring-ioc-getBeanNamesForType"></p>
+<p>两个return最终都是调用了doGetBeanNamesForType，继续往里看</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-getBeanNameForType-2.jpg" alt="spring-ioc-doGetBeanNamesForType"></p>
+<p>可以看到，它是遍历BeanFactory里面维护的beanDefinitionNames和manualSingletonNames成员变量，找出命中的beanName返回。(方法很长，截图未能展示manualSingletonNames部分)</p>
+<p>然后拿着这个beanName去找具体的bean实例。这里的代码比较长，在<code>AbstractBeanFactory</code>里面的<code>doGetBean()</code>中实现。</p>
+<p><img src="https://iddunk.oss-cn-shenzhen.aliyuncs.com/spring/spring-ioc-doGetBean.jpg" alt="spring-ioc-doGetBean"></p>
+<p>大意是先尝试去找手动添加bean的单例工厂里找有没有对应的实例，没有的话就往父类beanFactory里面找，最后没有的话就生成一个。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>本文只是走马观花的了解IoC的大致过程，知道其中调用了哪些类等等</li>
+<li>重点需要了解BeanFactory中的<strong>DefaultListableBeanFactory</strong>实现，<strong>在Spring中，实际上是把DefaultListableBeanFactory作为一个默认的功能完整的IoC容器来使用的。包含了基本IoC容器所具有的重要功能。</strong></li>
+<li>知道了大致过程后接下来应该仔细阅读，了解其中所运用的设计模式，以及各个类在整个架构中担任了什么功能</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/16/solidity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -656,12 +773,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
